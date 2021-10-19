@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "583739514172",
+    "firebase_url": "https://atmtester-b667e-default-rtdb.firebaseio.com",
+    "project_id": "atmtester-b667e",
+    "storage_bucket": "atmtester-b667e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583739514172:android:6be77a0a2756adff9a9239",
+        "android_client_info": {
+          "package_name": "com.hong.atm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583739514172-9b2far0c2vaa8u4v2t2ek05n7ffg7f9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADq_xq7OKtRearpEApRMyOchWlmRXrGlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583739514172-9b2far0c2vaa8u4v2t2ek05n7ffg7f9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
