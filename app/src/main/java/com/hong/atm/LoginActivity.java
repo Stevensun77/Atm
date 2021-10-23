@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,14 +48,24 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String pw = (String) dataSnapshot.getValue();
-                        if (pw.equals(passwd)) {
+
+                        // There are 2 cases causing the returned pw null
+                        // 1. The user enters nothing
+                        // 2. The user account is wrong
+                        if (pw != null && pw.equals(passwd)) {
                             setResult(RESULT_OK);
                             finish();
                         } else {
                             new AlertDialog.Builder(LoginActivity.this)
                                     .setTitle("登入結果")
                                     .setMessage("登入失敗")
-                                    .setPositiveButton("確認",null)
+                                    .setPositiveButton("確認", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            setResult(RESULT_CANCELED);
+                                            finish();
+                                        }
+                                    })
                                     .show();
                         }
                     }
